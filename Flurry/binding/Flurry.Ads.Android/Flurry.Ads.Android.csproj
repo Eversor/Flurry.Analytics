@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{555A87C2-EACE-471C-A3B6-CF50F7EDDAAE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Flurry.Ads</RootNamespace>
@@ -12,6 +12,7 @@
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <AssemblyName>Flurry.Ads.Android</AssemblyName>
     <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <ReleaseVersion>2.5.2.3</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -56,13 +57,16 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedJar Include="Jars\FlurryAds-6.3.0.jar" />
-  </ItemGroup>
-  <ItemGroup>
     <ProjectReference Include="..\Flurry.Analytics.Android\Flurry.Analytics.Android.csproj">
       <Project>{537319CA-4CD0-4271-A3B3-157E41B877B3}</Project>
       <Name>Flurry.Analytics.Android</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Jars\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\FlurryAds-6.4.2.jar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\..\packages\Xamarin.Android.Bindings.Generators.1.0.0.16\build\MonoAndroid\Xamarin.Android.Bindings.Generators.targets" Condition="Exists('..\..\..\packages\Xamarin.Android.Bindings.Generators.1.0.0.16\build\MonoAndroid\Xamarin.Android.Bindings.Generators.targets')" />

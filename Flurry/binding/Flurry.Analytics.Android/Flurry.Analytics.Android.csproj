@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProjectTypeGuids>{10368E6C-D01B-4462-8E8B-01FC667A7035};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <ProjectGuid>{537319CA-4CD0-4271-A3B3-157E41B877B3}</ProjectGuid>
     <OutputType>Library</OutputType>
     <RootNamespace>Flurry.Analytics</RootNamespace>
@@ -12,6 +12,7 @@
     <AssemblyName>Flurry.Analytics.Android</AssemblyName>
     <AndroidUseLatestPlatformSdk>False</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <ReleaseVersion>2.5.2.3</ReleaseVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -53,7 +54,10 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <EmbeddedJar Include="Jars\FlurryAnalytics-6.3.0.jar" />
+    <Folder Include="Jars\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedJar Include="Jars\FlurryAnalytics_6.4.2.jar" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.Bindings.targets" />
   <Import Project="..\..\..\packages\Xamarin.Android.Bindings.Generators.1.0.0.16\build\MonoAndroid\Xamarin.Android.Bindings.Generators.targets" Condition="Exists('..\..\..\packages\Xamarin.Android.Bindings.Generators.1.0.0.16\build\MonoAndroid\Xamarin.Android.Bindings.Generators.targets')" />
